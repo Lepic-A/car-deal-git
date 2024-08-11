@@ -265,7 +265,7 @@ const Footer = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-2/3 lg:w-1/2">
-              <div className="my-1">
+              {/* <div className="my-1">
                 <div className="-mx-3 flex items-center justify-center md:justify-start">
                   <a
                     href="/#"
@@ -286,20 +286,12 @@ const Footer = () => {
                     Terms of service
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="w-full px-4 md:w-1/3 lg:w-1/2">
               <div className="my-1 flex justify-center md:justify-end">
                 <p className="text-base text-gray-7">
-                  Designed and Developed by{" "}
-                  <a
-                    href="https://tailgrids.com"
-                    rel="nofollow noopner noreferrer"
-                    target="_blank"
-                    className="text-gray-1 hover:underline"
-                  >
-                    TailGrids and Next.js Templates
-                  </a>
+                Copyright 2024 - Car Deal. All rights reserved
                 </p>
               </div>
             </div>
@@ -307,7 +299,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div>
+      <div id="shaperton">
         <span className="absolute left-0 top-0 z-[-1] aspect-[95/82] w-full max-w-[570px]">
           <Image src="/images/footer/shape-1.svg" alt="shape" fill />
         </span>
