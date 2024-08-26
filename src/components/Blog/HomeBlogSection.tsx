@@ -3,13 +3,13 @@ import SingleBlog from "./SingleBlog";
 
 const HomeBlogSection = ({ posts }: any) => {
   return (
-    <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+    <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[100px]">
       <div className="container mx-auto">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Our Blogs"
-            title="Our Recent News"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            subtitle="Блог"
+            title="Нашите Последни Новини"
+            paragraph="Следете нашия блог за актуални новини, полезни съвети и интересни статии, свързани с автомобилите и транспорта."
             width="640px"
             center
           />
