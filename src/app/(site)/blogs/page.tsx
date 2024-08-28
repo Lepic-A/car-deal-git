@@ -4,9 +4,8 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Blog Grids | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "Blog grids page description",
+  title: "Блог | Car Deal - Новини и Съвети за Внос на Автомобили от Германия",
+  description: "Разгледайте нашия блог за актуални новини, съвети и полезна информация относно вноса на автомобили от Германия до България.",
 };
 
 const Blog = () => {
@@ -14,9 +13,9 @@ const Blog = () => {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Grids" />
+      <Breadcrumb pageName="Блог" />
 
-      <section className="pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
+      <section className="pb-10 pt-20 lg:pb-20 lg:pt-[100px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {posts.map((blog, i) => (
