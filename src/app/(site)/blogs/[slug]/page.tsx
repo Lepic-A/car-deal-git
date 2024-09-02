@@ -1,4 +1,3 @@
-import Newsletter from "@/components/Blog/Newsletter";
 import PopularArticle from "@/components/Blog/PopularArticle";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import Breadcrumb from "@/components/Common/Breadcrumb";
@@ -79,7 +78,7 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-      <Breadcrumb pageName="Blog Details" />
+      <Breadcrumb pageName={post.title} />
 
       <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
@@ -177,7 +176,6 @@ export default async function Post({ params }: Props) {
                 </div>
                 <div className="w-full px-4 lg:w-4/12">
                   <div>
-                    <Newsletter />
 
                     <div className="-mx-4 mb-8 flex flex-wrap">
                       <div className="w-full px-4">
@@ -185,7 +183,7 @@ export default async function Post({ params }: Props) {
                           className="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
                           data-wow-delay=".1s"
                         >
-                          Popular Articles
+                          Популярни статии
                         </h2>
                         <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
                       </div>
@@ -197,19 +195,6 @@ export default async function Post({ params }: Props) {
                           name={blog?.author}
                         />
                       ))}
-                    </div>
-
-                    <div
-                      className="wow fadeInUp mb-12 overflow-hidden rounded"
-                      data-wow-delay=".1s"
-                    >
-                      <Image
-                        src="/images/blog/bannder-ad.png"
-                        alt="image"
-                        className="w-full"
-                        width={408}
-                        height={254}
-                      />
                     </div>
                   </div>
                 </div>
@@ -223,7 +208,7 @@ export default async function Post({ params }: Props) {
               data-wow-delay=".2s"
             >
               <h2 className="relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]">
-                Related Articles
+                Свързани статии
               </h2>
               <span className="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
             </div>
