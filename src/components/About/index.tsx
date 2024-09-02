@@ -12,25 +12,28 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                  Brilliant Toolkit to Build Next.js SaaS Websites.
+                  Надеждно решение за внос на автомобили от Германия
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
+                  Ние от Car Deal сме вашите доверени партньори, когато става
+                  въпрос за внос на автомобили от Германия до България. С повече
+                  от 9 години опит в индустрията, ние се специализираме в
+                  предоставянето на цялостни услуги – от проверка и консултации,
+                  до транспорт и регистрация на вашето превозно средство.
                   <br /> <br />
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
+                  Нашият екип от експерти работи с вас, за да гарантира, че ще
+                  получите най-доброто качество и сигурност при избора и вноса
+                  на вашия нов автомобил. Ние се грижим за всичко, така че вие
+                  да се наслаждавате на процеса без стрес и неочаквани
+                  изненади.
                 </p>
 
-                <a
+                {/* <a
                   href="/#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
-                  Know More
-                </a>
+                  Научи повече
+                </a> */}
               </div>
             </div>
 
@@ -59,16 +62,16 @@ const About = () => {
                     />
                   </div>
 
-                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
+                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8 xl:h-[160px]">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
                         09
                       </span>
                       <span className="block text-base font-semibold text-white">
-                        We have
+                        Ние имаме
                       </span>
                       <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
+                        Години опит
                       </span>
                     </div>
                     <div>
