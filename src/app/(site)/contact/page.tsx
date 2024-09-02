@@ -3,15 +3,14 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "Contact Page | Play SaaS Starter Kit and Boilerplate for Next.js",
-  description: "This is contact page description",
+  title: "Контакти | Car Deal - Your Trusted Partner for Car Imports from Germany to Bulgaria",
+  description: "Get in touch with Car Deal, your reliable partner for importing cars from Germany to Bulgaria. We ensure a seamless process from selection to delivery.",
 };
 
 const ContactPage = () => {
   return (
     <>
-      <Breadcrumb pageName="Contact Page" />
+      <Breadcrumb pageName="Контакти" />
 
       <Contact />
     </>
