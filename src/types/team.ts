@@ -1,8 +1,8 @@
 export type TeamType = {
   id: number;
   name: string;
-  designation: string;
   image: string;
+  //designation: string;
   // facebookLink: string;
   // twitterLink: string;
   // instagramLink: string;
