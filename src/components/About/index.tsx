@@ -48,6 +48,7 @@ const About = () => {
                       alt="about image"
                       fill
                       className="h-full w-full object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
                 </div>
@@ -59,6 +60,7 @@ const About = () => {
                       alt="about image"
                       fill
                       className="h-full w-full object-cover object-center"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
 

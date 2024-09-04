@@ -33,15 +33,21 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
         </p>
 
         <div className="flex items-center gap-4">
-          <div className="h-[50px] w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} width={50} height={50} />
-          </div>
+        <div className="relative h-[50px] w-[50px] overflow-hidden rounded-full">
+          <Image 
+            src={image} 
+            alt={name} 
+            fill
+            sizes="50px"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
+
 
           <div>
             <h3 className="text-sm font-semibold text-dark dark:text-white">
               {name}
             </h3>
-            {/* <p className="text-body-secondary text-xs">{designation}</p> */}
           </div>
         </div>
       </div>

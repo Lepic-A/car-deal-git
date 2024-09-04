@@ -4,12 +4,11 @@ import featuresData from "./featuresData";
 
 const Features = () => {
   return (
-    <section className="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+    <section className="pt-3 dark:bg-dark lg:pb-[15px] lg:pt-[30px]">
       <div className="container">
         <SectionTitle
-          subtitle="Features"
-          title="Main Features Of Play"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Нашите услуги"
+          paragraph="Предлагаме широка гама от професионални услуги за улесняване на покупката и регистрацията на превозни средства от Германия до България. Всяка услуга е проектирана да осигури безпроблемно и удобно изживяване за нашите клиенти."
         />
 
         <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">

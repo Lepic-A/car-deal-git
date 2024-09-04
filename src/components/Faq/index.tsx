@@ -3,44 +3,44 @@ import SingleFaq from "./SingleFaq";
 
 const Faq = () => {
   return (
-    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[100px]">
       <div className="container">
         <SectionTitle
-          subtitle="FAQ"
-          title="Any Questions? Answered"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          subtitle="ЧЗВ"
+          title="Имаш въпроси? Ние имаме отговори"
+          paragraph="Има много варианти на въпроси, които могат да възникнат, и ние сме тук, за да ви предоставим отговори на всички тях."
           width="640px"
           center
         />
 
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+          <SingleFaq
+              question="Транспорт и доставка на автомобил до България"
+              answer="Организирането на транспорта и доставката на автомобил от Германия до България е важна стъпка след покупката. Ние предлагаме услуги за безопасен и надежден транспорт на автомобили, като осигуряваме своевременна доставка до посоченото от вас място. Работим с утвърдени транспортни компании, за да гарантираме, че автомобилът ви ще пристигне в отлично състояние."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Покупка на употребяван автомобил?"
+              answer="При покупка на употребяван автомобил е важно да обмислите типа автомобил, бюджета, марката, годината на производство и пробега. Внимателната подготовка и проверка са ключови, за да избегнете проблеми в бъдеще. Можете да търсите употребявани автомобили от дилъри, частни лица, онлайн пазари или аукциони."
             />
             <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Регистрация на автомобил от чужбина?"
+              answer="Регистрацията на внесен автомобил изисква спазване на законовите процедури в България. Можете да регистрирате автомобила си чрез местната регистрационна служба или онлайн чрез системата на ЕС. Основните документи, които ще ви трябват, включват свидетелството за регистрация от държавата на произход."
             />
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Преглед и диагностика на автомобил втора употреба"
+              answer="При покупка на автомобил втора употреба е важно да се направи техническа проверка, включваща двигател, скоростна кутия, пробег и състояние на каросерията. Тази проверка може да ви спести бъдещи проблеми и разходи."
             />
             <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Екотакса при внос на автомобил"
+              answer="Екотаксата в България се определя според типа и възрастта на автомобила, като целта ѝ е да намали замърсяването на околната среда. По-старите автомобили са обект на по-висока екотакса, особено в градските зони с по-голямо замърсяване. Тя може да се плаща еднократно или на месечни вноски."
             />
             <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Внос на автомобил от Германия"
+              answer="Ако планирате да купите автомобил в Германия, важно е да знаете как да изберете правилния автомобил, как да го закупите и прехвърлите собствеността, както и как да го доставите и регистрирате в България. За избор на автомобил, препоръчваме използването на агент, особено ако сте далеч от Германия. Закупуването може да бъде по-изгодно от частно лице. След покупката, автомобилът трябва да бъде регистриран и доставен с помощта на транспортна компания."
             />
           </div>
         </div>

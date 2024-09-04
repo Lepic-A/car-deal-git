@@ -43,6 +43,7 @@ const Hero = () => {
                   alt={`hero background ${index}`}
                   fill
                   style={{ objectFit: 'cover', objectPosition: 'center' }}
+                  priority={index === 0} // Add priority for the first image
                 />
               </div>
             ))}

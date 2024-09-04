@@ -1,4 +1,94 @@
+"use client";
+import { useState } from "react";
+
+type FormData = {
+  fullName: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 const Contact = () => {
+  const [formData, setFormData] = useState<FormData>({
+    fullName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [status, setStatus] = useState("");
+
+  const validate = () => {
+    const errors: Partial<FormData> = {};
+
+    if (!formData.fullName.trim()) {
+      errors.fullName = "Имена е задължително поле";
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      errors.email = "Email е задължително поле";
+    } else if (!emailPattern.test(formData.email)) {
+      errors.email = "Невалиден Email формат";
+    }
+
+    if (!formData.phone.trim()) {
+      errors.phone = "Телефон е задължително поле";
+    }
+
+    if (!formData.message.trim()) {
+      errors.message = "Съобщение е задължително поле";
+    }
+
+    return errors;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const validationErrors = validate();
+  
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+  
+    setErrors({});
+  
+    try {
+      const res = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (res.ok) {
+        setStatus("Имейлът е изпратен успешно!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        setStatus("Неуспешно изпращане на имейл.");
+      }
+    } catch (error) {
+      console.error("Error submitting form: ", error);
+      setStatus("An error occurred while sending the email.");
+    }
+  };
+  
+
   return (
     <section id="contact" className="relative py-20 md:py-[50px]">
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
@@ -34,7 +124,9 @@ const Contact = () => {
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
                       София, България
+                      <br />
                       улица &quot;България&quot;, 110
+                      <br />
                       пк 1000
                     </p>
                   </div>
@@ -68,13 +160,12 @@ const Contact = () => {
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <div
               className="wow fadeInUp rounded-lg bg-white px-8 py-10 shadow-testimonial dark:bg-dark-2 dark:shadow-none sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
-              data-wow-delay=".2s
-              "
+              data-wow-delay=".2s"
             >
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Изпратете ни съобщение
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-[22px]">
                   <label
                     htmlFor="fullName"
@@ -86,8 +177,17 @@ const Contact = () => {
                     type="text"
                     name="fullName"
                     placeholder="Име и Фамилия"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className={`w-full border-0 border-b pb-3 bg-transparent text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white ${
+                      errors.fullName ? "border-red-500" : "border-[#f1f1f1]"
+                    }`}
+                    value={formData.fullName}
+                    onChange={handleChange}
                   />
+                  {errors.fullName && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.fullName}
+                    </p>
+                  )}
                 </div>
                 <div className="mb-[22px]">
                   <label
@@ -97,11 +197,18 @@ const Contact = () => {
                     Email*
                   </label>
                   <input
-                    type="email"
+                    type="text"
                     name="email"
                     placeholder="example@yourmail.com"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className={`w-full border-0 border-b pb-3 bg-transparent text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white ${
+                      errors.email ? "border-red-500" : "border-[#f1f1f1]"
+                    }`}
+                    value={formData.email}
+                    onChange={handleChange}
                   />
+                  {errors.email && (
+                    <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+                  )}
                 </div>
                 <div className="mb-[22px]">
                   <label
@@ -114,8 +221,15 @@ const Contact = () => {
                     type="text"
                     name="phone"
                     placeholder="+359 12345678"
-                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    className={`w-full border-0 border-b pb-3 bg-transparent text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white ${
+                      errors.phone ? "border-red-500" : "border-[#f1f1f1]"
+                    }`}
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
+                  {errors.phone && (
+                    <p className="mt-1 text-sm text-red-500">{errors.phone}</p>
+                  )}
                 </div>
                 <div className="mb-[30px]">
                   <label
@@ -127,9 +241,18 @@ const Contact = () => {
                   <textarea
                     name="message"
                     rows={1}
-                    placeholder="напищете съобщението тук..."
-                    className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                    placeholder="напишете съобщението тук..."
+                    className={`w-full resize-none border-0 border-b pb-3 bg-transparent text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white ${
+                      errors.message ? "border-red-500" : "border-[#f1f1f1]"
+                    }`}
+                    value={formData.message}
+                    onChange={handleChange}
                   ></textarea>
+                  {errors.message && (
+                    <p className="mt-1 text-sm text-red-500">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
                 <div className="mb-0">
                   <button
@@ -140,6 +263,7 @@ const Contact = () => {
                   </button>
                 </div>
               </form>
+              {status && <p className="mt-4 text-sm">{status}</p>}
             </div>
           </div>
         </div>

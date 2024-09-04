@@ -5,39 +5,23 @@ import SingleTeam from "./SingleTeam";
 const teamData: TeamType[] = [
   {
     id: 1,
-    name: "Adveen Desuza",
-    designation: "UI Designer",
-    image: "/images/team/team-01.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
+    name: "Мартин Константинов",
+    image: "/images/team/team-01.png"
   },
   {
     id: 2,
-    name: "Jezmin uniya",
-    designation: "Product Designer",
-    image: "/images/team/team-02.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
+    name: "Преслав Димитров",
+    image: "/images/team/team-02.png"
   },
   {
     id: 3,
-    name: "Andrieo Gloree",
-    designation: "App Developer",
-    image: "/images/team/team-03.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
+    name: "Димитър Илиев",
+    image: "/images/team/team-03.png"
   },
   {
     id: 4,
-    name: "Jackie Sanders",
-    designation: "Content Writer",
-    image: "/images/team/team-04.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
+    name: "Георги Антонов",
+    image: "/images/team/team-04.png"
   },
 ];
 
@@ -45,14 +29,14 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px]"
+      className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[100px]"
     >
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Our Team"
-            title="Meet Our Team"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            subtitle="Нашият Екип"
+            title="Запознайте се с Oтбора"
+            paragraph="Екипът е съставен от опитни професионалисти, готови да ви предоставят най-доброто обслужване и експертни съвети."
             width="640px"
             center
           />

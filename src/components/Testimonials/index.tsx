@@ -5,28 +5,28 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Sabo Masties",
-    designation: "Founder @ Rolex",
+    name: "Иван Петров",
+    designation: "Основател @ АвтоТрейд",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Изключително съм доволен от услугата. Колата беше доставена бързо и в отлично състояние. Препоръчвам на всички!",
     image: "/images/testimonials/author-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Margin Gesmu",
-    designation: "Founder @ UI Hunter",
+    name: "Мария Димитрова",
+    designation: "Мениджър @ БГ Авто",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Професионализъм на високо ниво. Всичко беше организирано перфектно и колата пристигна точно както беше обещано.",
     image: "/images/testimonials/author-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "William Smith",
-    designation: "Founder @ Trorex",
+    name: "Георги Иванов",
+    designation: "Директор @ КарБГ",
     content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+      "Много съм впечатлен от обслужването. Процесът беше лесен и бърз, а колата отговаряше на всичките ми очаквания.",
     image: "/images/testimonials/author-03.png",
     star: 5,
   },
@@ -34,12 +34,12 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gray-1 py-20 dark:bg-dark-2 md:py-[120px]">
+    <section className="bg-gray-1 py-20 dark:bg-dark-2 md:py-[100px]">
       <div className="container px-4">
         <SectionTitle
-          subtitle="Testimonials"
-          title="What our Client Say"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          subtitle="Отзиви"
+          title="Какво Казват Нашите Клиенти"
+          paragraph="Има много различни мнения, но всички наши клиенти са единодушни - предлагаме надеждна услуга и високо ниво на удовлетворение."
           width="640px"
           center
         />
